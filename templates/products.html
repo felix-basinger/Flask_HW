@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Одежда
+{% endblock %}
+
+{% block content %}
+    <div class="items">
+        {% for item in products %}
+        <div class="item">
+            {% if item.model == 'Весенняя' %}
+            <img src="/static/images/jacket_spring.jpg">
+            {% elif item.model == 'Зимняя' %}
+            <img src="/static/images/jacket_winter.jpg">
+            {% elif item.model == 'Осенняя' %}
+            <img src="/static/images/jacket_autumn.jpg">
+            {% elif item.model == 'Беговая' %}
+            <img src="/static/images/shoes_running.jpg">
+            {% elif item.model == 'Походная' %}
+            <img src="/static/images/shoes_tourism.jpg">
+            {% elif item.model == 'Туфли' %}
+            <img src="/static/images/shoes_businnes.jpg">
+            {% endif %}
+            <h1>{{ item.category }}</h1>
+            <p>{{ item.model }}</p>
+            <p>{{ item.ID }}</p>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

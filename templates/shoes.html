@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Обувь
+{% endblock %}
+
+{% block content %}
+    <div class="shoes">
+        {% for item in shoes %}
+            {% if item.category == 'Обувь' %}
+                <div class="shoes_item">
+                    {% if item.model == 'Беговая' %}
+                    <img src="/static/images/shoes_running.jpg">
+                    {% elif item.model == 'Походная' %}
+                    <img src="/static/images/shoes_tourism.jpg">
+                    {% elif item.model == 'Туфли' %}
+                    <img src="/static/images/shoes_businnes.jpg">
+                    {% endif %}
+                    <h1>{{ item.category }}</h1>
+                    <p>{{ item.model }}</p>
+                    <p>{{ item.ID }}</p>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}

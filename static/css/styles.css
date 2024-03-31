@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+}
+
+header {
+    background-color: #000;
+    height: 50px;
+}
+
+.menu {
+    flex-grow: 1;
+    padding-top: 10px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.menu ul {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    font-size: 22px;
+    padding: 8px 10px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ff3d00;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.info {
+    width: 270px;
+    margin: 0 auto;
+}
+
+.info h1 {
+    padding: 10px 0;
+}
+
+.info p {
+    padding: 5px 0;
+}
+
+.items {
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    column-gap: 170px
+}
+
+.item {
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.item p {
+    padding-top: 15px;
+}
+
+.item img {
+    width: 150px;
+    height: 150px;
+}
+
+
+
+
+.jackets {
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    column-gap: 170px
+}
+
+.jacket {
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.jacket p {
+    padding-top: 15px;
+}
+
+.jacket img {
+    width: 150px;
+    height: 150px;
+}
+
+
+.shoes {
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    column-gap: 170px
+}
+
+.shoes_item {
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.shoes_item p {
+    padding-top: 15px;
+}
+
+.shoes_item img {
+    width: 150px;
+    height: 150px;
+}

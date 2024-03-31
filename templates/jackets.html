@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Куртки
+{% endblock %}
+
+{% block content %}
+    <div class="jackets">
+        {% for item in jackets %}
+            {% if item.category == 'Куртка' %}
+                <div class="jacket">
+                    {% if item.model == 'Весенняя' %}
+                    <img src="/static/images/jacket_spring.jpg">
+                    {% elif item.model == 'Зимняя' %}
+                    <img src="/static/images/jacket_winter.jpg">
+                    {% elif item.model == 'Осенняя' %}
+                    <img src="/static/images/jacket_autumn.jpg">
+                    {% endif %}
+                    <h1>{{ item.category }}</h1>
+                    <p>{{ item.model }}</p>
+                    <p>{{ item.ID }}</p>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}
