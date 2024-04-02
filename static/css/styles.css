@@ -19,7 +19,7 @@ header {
 .menu {
     flex-grow: 1;
     padding-top: 10px;
-    width: 300px;
+    width: 450px;
     margin: 0 auto;
 }
 
@@ -145,4 +145,55 @@ header {
 .shoes_item img {
     width: 150px;
     height: 150px;
+}
+
+.reg-form h1{
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.reg-form form {
+    width: 250px;
+	margin: 0 auto;
+}
+
+.reg-form input, button, textarea {
+	font-size: 20px;
+	color: #000;
+}
+
+.reg-form .for-name {
+    width: 250px;
+    height: 30px;
+    color: #000;
+}
+
+.form-group {
+    padding-bottom: 30px;
+}
+
+.answer {
+    text-align: center;
+    padding-top: 50px;
+
+}
+
+.answer p {
+    font-size: 50px;
+}
+
+.ans-button {
+    padding-top: 100px;
+    margin: 0 auto;
+    width: 100px;
+}
+
+.ans-button .btn {
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+    background-color: green;
 }

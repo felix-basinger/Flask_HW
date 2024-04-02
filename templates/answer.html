@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Ответ
+{% endblock %}
+
+{% block content %}
+    <div class="answer">
+        <p>Добро пожаловать, {{ name }}</p>
+        <p>Ваш E-mail: {{ mail }}</p>
+    </div>
+    <form action="/cookie_del" method="post">
+        <div class="ans-button">
+            <input class="btn" type="submit" value="Выйти">
+        </div>
+    </form>
+{% endblock %}

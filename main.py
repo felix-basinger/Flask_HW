@@ -1,5 +1,5 @@
-from flask import Flask
-from flask import render_template
+from flask import Flask, url_for
+from flask import render_template, request, make_response, redirect
 
 app = Flask(__name__)
 
@@ -50,3 +50,26 @@ def jackets():
 def shoes():
     context = {'shoes': PRODUCTS}
     return render_template('shoes.html', **context)
+
+
+@app.route('/submit/', methods=['GET', 'POST'])
+def submit():
+    if request.method == 'POST':
+        name = request.form.get('name')
+        mail = request.form.get('email')
+        response = make_response(render_template('answer.html', name=name, mail=mail))
+        response.set_cookie('username', name)
+        response.set_cookie('mail', mail)
+        return response
+    return render_template('form.html')
+
+
+@app.route('/cookie_del', methods=['GET', 'POST'])
+def cookie_del():
+    name = request.form.get('username')
+    mail = request.form.get('mail')
+    response = make_response(redirect(url_for('submit')))
+    response.delete_cookie('username', name)
+    response.delete_cookie('mail', mail)
+    return response
+
